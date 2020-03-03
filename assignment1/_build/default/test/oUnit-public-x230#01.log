@@ -1,0 +1,26 @@
+2020-02-20T03:00:01+00:00 x230#01 I: Start test public:0:assignment_1_1.
+2020-02-20T03:00:01+00:00 x230#01 I: Test public:0:assignment_1_1 is successful.
+2020-02-20T03:00:01+00:00 x230#01 I: End test public:0:assignment_1_1.
+2020-02-20T03:00:01+00:00 x230#01 I: Start test public:2:assignment_1_3.
+2020-02-20T03:00:01+00:00 x230#01 I: Test public:2:assignment_1_3 is successful.
+2020-02-20T03:00:01+00:00 x230#01 I: End test public:2:assignment_1_3.
+2020-02-20T03:00:01+00:00 x230#01 I: Start test public:4:assignment_1_5.
+2020-02-20T03:00:01+00:00 x230#01 E: Test public:4:assignment_1_5 exited with an error.
+2020-02-20T03:00:01+00:00 x230#01 E: Failure("Not implemented5") in test public:4:assignment_1_5.
+2020-02-20T03:00:01+00:00 x230#01 E: Raised at file "src/assignment1.ml", line 58, characters 1-35
+2020-02-20T03:00:01+00:00 x230#01 E: Called from file "test/public.ml", line 18, characters 36-59
+2020-02-20T03:00:01+00:00 x230#01 E: Called from file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+2020-02-20T03:00:01+00:00 x230#01 E: 
+2020-02-20T03:00:01+00:00 x230#01 I: End test public:4:assignment_1_5.
+2020-02-20T03:00:01+00:00 x230#01 I: Start test public:5:assignment_1_6.
+2020-02-20T03:00:01+00:00 x230#01 I: Test public:5:assignment_1_6 is successful.
+2020-02-20T03:00:01+00:00 x230#01 I: End test public:5:assignment_1_6.
+2020-02-20T03:00:01+00:00 x230#01 I: Start test public:6:assignment_1_7.
+2020-02-20T03:00:01+00:00 x230#01 I: Test public:6:assignment_1_7 is successful.
+2020-02-20T03:00:01+00:00 x230#01 I: End test public:6:assignment_1_7.
+2020-02-20T03:00:01+00:00 x230#01 I: Start test public:7:assignment_1_8.
+2020-02-20T03:00:01+00:00 x230#01 I: Test public:7:assignment_1_8 is successful.
+2020-02-20T03:00:01+00:00 x230#01 I: End test public:7:assignment_1_8.
+2020-02-20T03:00:01+00:00 x230#01 I: Start test public:8:assignment_1_9.
+2020-02-20T03:00:01+00:00 x230#01 I: Test public:8:assignment_1_9 is successful.
+2020-02-20T03:00:01+00:00 x230#01 I: End test public:8:assignment_1_9.

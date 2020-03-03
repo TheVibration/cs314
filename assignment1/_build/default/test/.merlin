@@ -1,0 +1,26 @@
+EXCLUDE_QUERY_DIR
+B /home/hp/.opam/default/lib/bytes
+B /home/hp/.opam/default/lib/oUnit
+B /home/hp/.opam/default/lib/ounit2
+B /home/hp/.opam/default/lib/ounit2/advanced
+B /home/hp/.opam/default/lib/qcheck
+B /home/hp/.opam/default/lib/qcheck-core
+B /home/hp/.opam/default/lib/qcheck-core/runner
+B /home/hp/.opam/default/lib/qcheck-ounit
+B /home/hp/.opam/default/lib/stdlib-shims
+B /usr/local/lib/ocaml
+B ../_build/default/src/.asn1.objs/byte
+B ../_build/default/test/.public.eobjs/byte
+S /home/hp/.opam/default/lib/bytes
+S /home/hp/.opam/default/lib/oUnit
+S /home/hp/.opam/default/lib/ounit2
+S /home/hp/.opam/default/lib/ounit2/advanced
+S /home/hp/.opam/default/lib/qcheck
+S /home/hp/.opam/default/lib/qcheck-core
+S /home/hp/.opam/default/lib/qcheck-core/runner
+S /home/hp/.opam/default/lib/qcheck-ounit
+S /home/hp/.opam/default/lib/stdlib-shims
+S /usr/local/lib/ocaml
+S ../src
+S .
+FLG -w -40
