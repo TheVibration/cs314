@@ -1,10 +1,10 @@
 # dune exec src/assignment2.exe
 # OCAMLPARAM: unset
 # Workspace root: /home/hp/Documents/cs314/assignment2/assignment2
-$ /usr/bin/nproc > /tmp/duneaf93bd.output 2> /dev/null
+$ /usr/bin/nproc > /tmp/dune3569d1.output 2> /dev/null
 # Auto-detected concurrency: 4
 # disable binary cache
-$ /usr/local/bin/ocamlc.opt -config > /tmp/dunee3ac8b.output
+$ /usr/local/bin/ocamlc.opt -config > /tmp/dune6c6acf.output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -119,10 +119,6 @@ $ /usr/local/bin/ocamlc.opt -config > /tmp/dunee3ac8b.output
 $ (cd _build/default && /usr/local/bin/ocamldep.opt -modules -impl src/lambda.ml) > _build/default/src/.assignment2.eobjs/lambda.ml.d
 $ (cd _build/default && /usr/local/bin/ocamlc.opt -w -40 -g -bin-annot -I src/.assignment2.eobjs/byte -no-alias-deps -o src/.assignment2.eobjs/byte/lambda.cmo -c -impl src/lambda.ml)
 $ (cd _build/default && /usr/local/bin/ocamlc.opt -w -40 -g -bin-annot -I src/.assignment2.eobjs/byte -no-alias-deps -o src/.assignment2.eobjs/byte/assignment2.cmo -c -impl src/assignment2.ml)
-> File "src/assignment2.ml", line 25, characters 23-26:
-> 25 | let _ = assert (remove "b" ["a";"b";"c"] = ["a";"c"]);
->                             ^^^
-> Error: This expression has type string but an expression was expected of type
->          'a list
-[2]
 $ (cd _build/default && /usr/local/bin/ocamlopt.opt -w -40 -g -I src/.assignment2.eobjs/byte -I src/.assignment2.eobjs/native -intf-suffix .ml -no-alias-deps -o src/.assignment2.eobjs/native/lambda.cmx -c -impl src/lambda.ml)
+$ (cd _build/default && /usr/local/bin/ocamlopt.opt -w -40 -g -I src/.assignment2.eobjs/byte -I src/.assignment2.eobjs/native -intf-suffix .ml -no-alias-deps -o src/.assignment2.eobjs/native/assignment2.cmx -c -impl src/assignment2.ml)
+$ (cd _build/default && /usr/local/bin/ocamlopt.opt -w -40 -g -o src/assignment2.exe src/.assignment2.eobjs/native/error.cmx src/.assignment2.eobjs/native/syntax.cmx src/.assignment2.eobjs/native/lambda_parser.cmx src/.assignment2.eobjs/native/lambda_lexer.cmx src/.assignment2.eobjs/native/lambda_parse.cmx src/.assignment2.eobjs/native/lambda.cmx src/.assignment2.eobjs/native/assignment2.cmx)

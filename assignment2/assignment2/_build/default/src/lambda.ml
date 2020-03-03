@@ -20,7 +20,7 @@ let mem e l =
 
 let remove e l =
   (* YOUR CODE HERE *)
-  List.fold_left(fun acc x -> if x=e then acc else acc@x) [] l
+  List.fold_left(fun acc x -> if x=e then acc else acc@[x]) [] l
   (*raise (Failure "Problem 2 not implemented")*)
 
 
