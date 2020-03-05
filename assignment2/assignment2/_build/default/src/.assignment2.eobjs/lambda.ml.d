@@ -1,1 +1,1 @@
-src/lambda.ml: Lambda_parse List Syntax
+src/lambda.ml: Lambda_parse List String Syntax

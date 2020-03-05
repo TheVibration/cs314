@@ -16,18 +16,23 @@ let mem e l =
   List.fold_left(fun acc x -> if x=e then true else acc) false l
   (*raise (Failure "Problem 1 not implemented")*)
 
-
-
 let remove e l =
   (* YOUR CODE HERE *)
   List.fold_left(fun acc x -> if x=e then acc else acc@[x]) [] l
   (*raise (Failure "Problem 2 not implemented")*)
 
-
-
 let union l1 l2 =
   (* YOUR CODE HERE *)
-  raise (Failure "Problem 3 not implemented")
+  let rec remove_stutter l = 
+     match l with
+     | [] -> []
+     | x::y::tail when x=y -> remove_stutter (y::tail)
+     | x::tail -> x::remove_stutter tail
+
+  in
+
+  remove_stutter((List.sort String.compare (l1@l2))) 
+  (*raise (Failure "Problem 3 not implemented")*)
 
 
 
