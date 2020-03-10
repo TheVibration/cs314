@@ -52,7 +52,20 @@ let add e l =
 
 let rec free_variables e =
   (* YOUR CODE HERE *)
-  raise (Failure "Problem 5 not implemented")
+  let union l1 l2 =
+    let rec remove_stutter l =
+      match l with
+      | [] -> []
+      | x::y::tail when x=y -> remove_stutter (y::tail)
+      | x::tail -> x::remove_stutter tail
+    in
+    remove_stutter((List.sort String.compare (l1@l2)))
+  in
+  match e with
+  | Var x -> [x]
+  | App (e1,e2) -> union (free_variables e1) (free_variables e2)
+  | Lam (x,e0) -> 
+    remove x (free_variables e0)
 
 let rec substitute expr a b =
   (* YOUR CODE HERE *)
