@@ -1,10 +1,18 @@
 # dune exec src/assignment2.exe
 # OCAMLPARAM: unset
+<<<<<<< HEAD
 # Workspace root: /home/harsh/Documents/cs314/assignment2/assignment2
 $ /usr/bin/nproc > /tmp/dune8c9726.output 2> /dev/null
 # Auto-detected concurrency: 4
 # disable binary cache
 $ /usr/bin/ocamlc.opt -config > /tmp/dune00d2fe.output
+=======
+# Workspace root: /home/hp/Documents/cs314/assignment2/assignment2
+$ /usr/bin/nproc > /tmp/dune461ab5.output 2> /dev/null
+# Auto-detected concurrency: 4
+# disable binary cache
+$ /usr/local/bin/ocamlc.opt -config > /tmp/dunefaee97.output
+>>>>>>> aeaafe9beff8a2c86a1c7120a4282b640a1104e1
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -101,6 +109,7 @@ $ /usr/bin/ocamlc.opt -config > /tmp/dune00d2fe.output
 #      ; windows_unicode = false
 #      }
 #  }
+<<<<<<< HEAD
 # Workspace root: /home/harsh/Documents/cs314/assignment2/assignment2
 $ (cd _build/default && /usr/bin/ocamldep.opt -modules -impl src/error.ml) > _build/default/src/.assignment2.eobjs/error.ml.d
 $ (cd _build/default && /usr/bin/ocamldep.opt -modules -impl src/assignment2.ml) > _build/default/src/.assignment2.eobjs/assignment2.ml.d
@@ -127,3 +136,6 @@ $ (cd _build/default && /usr/bin/ocamlopt.opt -w -40 -g -I src/.assignment2.eobj
 $ (cd _build/default && /usr/bin/ocamlopt.opt -w -40 -g -I src/.assignment2.eobjs/byte -I src/.assignment2.eobjs/native -intf-suffix .ml -no-alias-deps -o src/.assignment2.eobjs/native/lambda.cmx -c -impl src/lambda.ml)
 $ (cd _build/default && /usr/bin/ocamlopt.opt -w -40 -g -I src/.assignment2.eobjs/byte -I src/.assignment2.eobjs/native -intf-suffix .ml -no-alias-deps -o src/.assignment2.eobjs/native/assignment2.cmx -c -impl src/assignment2.ml)
 $ (cd _build/default && /usr/bin/ocamlopt.opt -w -40 -g -o src/assignment2.exe src/.assignment2.eobjs/native/error.cmx src/.assignment2.eobjs/native/syntax.cmx src/.assignment2.eobjs/native/lambda_parser.cmx src/.assignment2.eobjs/native/lambda_lexer.cmx src/.assignment2.eobjs/native/lambda_parse.cmx src/.assignment2.eobjs/native/lambda.cmx src/.assignment2.eobjs/native/assignment2.cmx)
+=======
+# Workspace root: /home/hp/Documents/cs314/assignment2/assignment2
+>>>>>>> aeaafe9beff8a2c86a1c7120a4282b640a1104e1
