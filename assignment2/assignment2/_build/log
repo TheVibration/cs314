@@ -1,10 +1,10 @@
 # dune exec src/assignment2.exe
 # OCAMLPARAM: unset
 # Workspace root: /home/harsh/Documents/cs314/assignment2/assignment2
-$ /usr/bin/nproc > /tmp/dune00ac3a.output 2> /dev/null
+$ /usr/bin/nproc > /tmp/dune6d4357.output 2> /dev/null
 # Auto-detected concurrency: 4
 # disable binary cache
-$ /usr/bin/ocamlc.opt -config > /tmp/dunee04c06.output
+$ /usr/bin/ocamlc.opt -config > /tmp/dune0f3784.output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
