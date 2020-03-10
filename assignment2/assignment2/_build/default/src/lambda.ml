@@ -14,12 +14,10 @@ let fresh s =
 let mem e l =
   (* YOUR CODE HERE *)
   List.fold_left(fun acc x -> if x=e then true else acc) false l
-  (*raise (Failure "Problem 1 not implemented")*)
 
 let remove e l =
   (* YOUR CODE HERE *)
   List.fold_left(fun acc x -> if x=e then acc else acc@[x]) [] l
-  (*raise (Failure "Problem 2 not implemented")*)
 
 let union l1 l2 =
   (* YOUR CODE HERE *)
@@ -28,25 +26,33 @@ let union l1 l2 =
      | [] -> []
      | x::y::tail when x=y -> remove_stutter (y::tail)
      | x::tail -> x::remove_stutter tail
-
   in
-
   remove_stutter((List.sort String.compare (l1@l2))) 
-  (*raise (Failure "Problem 3 not implemented")*)
-
-
 
 let add e l =
   (* YOUR CODE HERE *)
-  raise (Failure "Problem 4 not implemented")
+  (*
+  let mem e l = List.fold_left(fun acc x -> if x=e then true else acc) false l
+  in
+  let union l1 l2 =
+    let rec remove_stutter l =
+      match l with
+      | [] -> []
+      | x::y::tail when x=y -> remove_stutter (y::tail)
+      | x::tail -> x::remove_stutter tail
+    in
+    remove_stutter((List.sort String.compare (l1@l2)))
+  in
+  fun e l -> if (mem (e) (l)) then (List.sort String.compare(l)) else (union l [e])
+  *)
 
-
+  let mem e l = List.fold_left(fun acc x -> if x=e then true else acc) false l
+  in
+  if (mem (e) (l)) then (List.sort String.compare(l)) else (List.sort String.compare(l@[e]))
 
 let rec free_variables e =
   (* YOUR CODE HERE *)
   raise (Failure "Problem 5 not implemented")
-
-
 
 let rec substitute expr a b =
   (* YOUR CODE HERE *)
