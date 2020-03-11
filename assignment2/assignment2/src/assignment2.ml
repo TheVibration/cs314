@@ -100,6 +100,7 @@ assert (reduced = true &&
 assert (reduced = false &&
         alpha_equiv expr (parse_string "x y z"))
 
+
 (* Testing problem 9: reduce_normal *)
 let _ =
 let expr, reduced = reduce_normal (parse_string "(\\x.x) ((\\x.x) (\\z.(\\x.x) z))") in
