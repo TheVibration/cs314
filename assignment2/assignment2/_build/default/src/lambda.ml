@@ -27,58 +27,17 @@ let union l1 l2 =
   remove_stutter((List.sort String.compare (l1@l2))) 
 
 let add e l =
-  (*
-  let mem e l = List.fold_left(fun acc x -> if x=e then true else acc) false l
-  in
-  let union l1 l2 =
-    let rec remove_stutter l =
-      match l with
-      | [] -> []
-      | x::y::tail when x=y -> remove_stutter (y::tail)
-      | x::tail -> x::remove_stutter tail
-    in
-    remove_stutter((List.sort String.compare (l1@l2)))
-  in
-  fun e l -> if (mem (e) (l)) then (List.sort String.compare(l)) else (union l [e])
-  *)
+  (*fun e l -> if (mem (e) (l)) then (List.sort String.compare(l)) else (union l [e])*)
 
-  let mem e l = List.fold_left(fun acc x -> if x=e then true else acc) false l
-  in
   if (mem (e) (l)) then (List.sort String.compare(l)) else (List.sort String.compare(l@[e]))
 
 let rec free_variables e =
-  let union l1 l2 =
-    let rec remove_stutter l =
-      match l with
-      | [] -> []
-      | x::y::tail when x=y -> remove_stutter (y::tail)
-      | x::tail -> x::remove_stutter tail
-    in
-    remove_stutter((List.sort String.compare (l1@l2)))
-  in
   match e with
   | Var x -> [x]
   | App (e1,e2) -> union (free_variables e1) (free_variables e2)
   | Lam (x,e0) -> remove x (free_variables e0)
 
 let rec substitute expr a b =
-  let rec free_variables e =
-    let union l1 l2 =
-      let rec remove_stutter l =
-        match l with
-        | [] -> []
-        | x::y::tail when x=y -> remove_stutter (y::tail)
-        | x::tail -> x::remove_stutter tail
-      in
-      remove_stutter((List.sort String.compare (l1@l2)))
-    in
-    match e with
-    | Var x -> [x]
-    | App (e1,e2) -> union (free_variables e1) (free_variables e2)
-    | Lam (x,e0) -> remove x (free_variables e0)
-  in
-  let mem e l = List.fold_left(fun acc x -> if x=e then true else acc) false l
-  in
   match expr with
   | Var x -> if a=x then b else expr
   | App (e1,e2) -> App (substitute e1 a b, substitute e2 a b)
