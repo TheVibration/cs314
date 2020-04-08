@@ -64,17 +64,30 @@ let dll_of_list l =
   loop t start
 
 let list_of_dll l =
-  raise (Failure "list_of_dll not implemented")
-
+  let acc = ref []
+  in
+  let _ = iter l (fun e -> acc := !acc@[e.content])
+  in
+  !acc
+  
 let length l =
-  raise (Failure "length not implemented")
+  let counter = ref 0
+  in
+  let _ = iter l (fun e -> counter := !counter + 1)
+  in
+  !counter
 
 let duplicate l =
-  raise (Failure "duplicate not implemented")
+  let _ = iter l (fun el -> insert_after el el.content)
+  in
+  !l
 
 let reverse l =
-  raise (Failure "reverse not implemented")
-
+  let dll = ref None
+  in
+  let _ = iter l (fun el -> insert_first dll el.content)
+  in
+  !dll
 (******************** Problem 2 ********************)
 
 module type Serializable = sig
