@@ -1,0 +1,256 @@
+# dune runtest -f
+# OCAMLPARAM: unset
+# Workspace root: /home/hp/Documents/cs314/assignment3
+$ /usr/bin/nproc > /tmp/dunee817f3.output 2> /dev/null
+# Auto-detected concurrency: 4
+# disable binary cache
+$ /usr/local/bin/ocamlc.opt -config > /tmp/duneb064c2.output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Release
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path = Some External "/home/hp/.opam/default/lib/toplevel"
+#  ; ocaml_bin = External "/usr/local/bin"
+#  ; ocaml = External "/home/hp/.opam/default/bin/ocaml"
+#  ; ocamlc = External "/usr/local/bin/ocamlc.opt"
+#  ; ocamlopt = Some External "/usr/local/bin/ocamlopt.opt"
+#  ; ocamldep = External "/usr/local/bin/ocamldep.opt"
+#  ; ocamlmklib = External "/usr/local/bin/ocamlmklib.opt"
+#  ;
+#  env =
+#    map
+#      { "DUNE_CONFIGURATOR" : "/usr/local/bin/ocamlc.opt"
+#      ; "INSIDE_DUNE" : "1"
+#      ;
+#      "OCAMLFIND_IGNORE_DUPS_IN" :
+#        "/home/hp/Documents/cs314/assignment3/_build/install/default/lib"
+#      ;
+#      "OCAMLPATH" :
+#        "/home/hp/Documents/cs314/assignment3/_build/install/default/lib"
+#      ; "OCAML_COLOR" : "always"
+#      ; "OPAMCOLOR" : "always"
+#      }
+#  ; findlib_path = [ External "/home/hp/.opam/default/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; opam_vars = map {}
+#  ;
+#  ocaml_config =
+#    { version = "4.09.0"
+#    ; standard_library_default = "/usr/local/lib/ocaml"
+#    ; standard_library = "/usr/local/lib/ocaml"
+#    ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#    ; ccomp_type = "cc"
+#    ; c_compiler = "gcc"
+#    ; ocamlc_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-fPIC" ]
+#    ; ocamlopt_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#    ;
+#    bytecomp_c_compiler =
+#      [ "gcc"
+#      ; "-O2"
+#      ; "-fno-strict-aliasing"
+#      ; "-fwrapv"
+#      ; "-fPIC"
+#      ; "-D_FILE_OFFSET_BITS=64"
+#      ; "-D_REENTRANT"
+#      ]
+#    ; bytecomp_c_libraries = [ "-lm"; "-ldl"; "-lpthread" ]
+#    ;
+#    native_c_compiler =
+#      [ "gcc"
+#      ; "-O2"
+#      ; "-fno-strict-aliasing"
+#      ; "-fwrapv"
+#      ; "-D_FILE_OFFSET_BITS=64"
+#      ; "-D_REENTRANT"
+#      ]
+#    ; native_c_libraries = [ "-lm"; "-ldl" ]
+#    ; cc_profile = []
+#    ; architecture = "amd64"
+#    ; model = "default"
+#    ; int_size = 63
+#    ; word_size = 64
+#    ; system = "linux"
+#    ; asm = [ "as" ]
+#    ; asm_cfi_supported = true
+#    ; with_frame_pointers = false
+#    ; ext_exe = ""
+#    ; ext_obj = ".o"
+#    ; ext_asm = ".s"
+#    ; ext_lib = ".a"
+#    ; ext_dll = ".so"
+#    ; os_type = "Unix"
+#    ; default_executable_name = "a.out"
+#    ; systhread_supported = true
+#    ; host = "x86_64-pc-linux-gnu"
+#    ; target = "x86_64-pc-linux-gnu"
+#    ; profiling = false
+#    ; flambda = false
+#    ; spacetime = false
+#    ; safe_string = false
+#    ; exec_magic_number = "Caml1999X026"
+#    ; cmi_magic_number = "Caml1999I026"
+#    ; cmo_magic_number = "Caml1999O026"
+#    ; cma_magic_number = "Caml1999A026"
+#    ; cmx_magic_number = "Caml1999Y026"
+#    ; cmxa_magic_number = "Caml1999Z026"
+#    ; ast_impl_magic_number = "Caml1999M026"
+#    ; ast_intf_magic_number = "Caml1999N026"
+#    ; cmxs_magic_number = "Caml1999D026"
+#    ; cmt_magic_number = "Caml1999T026"
+#    ; natdynlink_supported = true
+#    ; supports_shared_libraries = true
+#    ; windows_unicode = false
+#    }
+#  ;
+#  which =
+#    map
+#      { "ocaml" : Some External "/home/hp/.opam/default/bin/ocaml"
+#      ; "ocamlc" : Some External "/usr/local/bin/ocamlc.opt"
+#      ; "ocamlobjinfo" : Some External "/usr/local/bin/ocamlobjinfo.opt"
+#      }
+#  }
+$ (cd _build/default/test && ./public.exe)
+> ....EEEEEEEEEEE
+> ==============================================================================
+> Error: public:14:assignment_2_7.
+>
+> File "/home/hp/Documents/cs314/assignment3/_build/default/test/oUnit-public-x230#01.log", line 40, characters 1-1:
+> Error: public:14:assignment_2_7 (in the log).
+>
+> Raised at file "src/assignment3.ml", line 102, characters 4-59
+> Called from file "test/public.ml", line 75, characters 21-88
+> Called from file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+>
+> Failure("SerializableList.fold not implemented")
+> ------------------------------------------------------------------------------
+> ==============================================================================
+> Error: public:13:assignment_2_6.
+>
+> File "/home/hp/Documents/cs314/assignment3/_build/default/test/oUnit-public-x230#02.log", line 48, characters 1-1:
+> Error: public:13:assignment_2_6 (in the log).
+>
+> Raised at file "src/assignment3.ml", line 110, characters 4-67
+> Called from file "src/assignment3.ml", line 97, characters 29-46
+> Called from file "src/assignment3.ml", line 99, characters 10-21
+> Called from file "test/public.ml", line 72, characters 52-120
+> Called from file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+>
+> Failure("SerializableArray.string_of_t not implemented")
+> ------------------------------------------------------------------------------
+> ==============================================================================
+> Error: public:8:assignment_2_1.
+>
+> File "/home/hp/Documents/cs314/assignment3/_build/default/test/oUnit-public-x230#01.log", line 32, characters 1-1:
+> Error: public:8:assignment_2_1 (in the log).
+>
+> Raised at file "src/assignment3.ml", line 110, characters 4-67
+> Called from file "test/public.ml", line 57, characters 30-74
+> Called from file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+>
+> Failure("SerializableArray.string_of_t not implemented")
+> ------------------------------------------------------------------------------
+> ==============================================================================
+> Error: public:12:assignment_2_5.
+>
+> File "/home/hp/Documents/cs314/assignment3/_build/default/test/oUnit-public-x230#02.log", line 40, characters 1-1:
+> Error: public:12:assignment_2_5 (in the log).
+>
+> Raised at file "src/assignment3.ml", line 113, characters 4-60
+> Called from file "test/public.ml", line 69, characters 21-84
+> Called from file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+>
+> Failure("SerializableArray.fold not implemented")
+> ------------------------------------------------------------------------------
+> ==============================================================================
+> Error: public:11:assignment_2_4.
+>
+> File "/home/hp/Documents/cs314/assignment3/_build/default/test/oUnit-public-x230#02.log", line 32, characters 1-1:
+> Error: public:11:assignment_2_4 (in the log).
+>
+> Raised at file "src/assignment3.ml", line 110, characters 4-67
+> Called from file "test/public.ml", line 66, characters 48-112
+> Called from file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+>
+> Failure("SerializableArray.string_of_t not implemented")
+> ------------------------------------------------------------------------------
+> ==============================================================================
+> Error: public:10:assignment_2_3.
+>
+> File "/home/hp/Documents/cs314/assignment3/_build/default/test/oUnit-public-x230#02.log", line 24, characters 1-1:
+> Error: public:10:assignment_2_3 (in the log).
+>
+> Raised at file "src/assignment3.ml", line 113, characters 4-60
+> Called from file "test/public.ml", line 63, characters 32-118
+> Called from file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+>
+> Failure("SerializableArray.fold not implemented")
+> ------------------------------------------------------------------------------
+> ==============================================================================
+> Error: public:9:assignment_2_2.
+>
+> File "/home/hp/Documents/cs314/assignment3/_build/default/test/oUnit-public-x230#02.log", line 16, characters 1-1:
+> Error: public:9:assignment_2_2 (in the log).
+>
+> Raised at file "src/assignment3.ml", line 110, characters 4-67
+> Called from file "test/public.ml", line 60, characters 48-115
+> Called from file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+>
+> Failure("SerializableArray.string_of_t not implemented")
+> ------------------------------------------------------------------------------
+> ==============================================================================
+> Error: public:5:assignment_1_6.
+>
+> File "/home/hp/Documents/cs314/assignment3/_build/default/test/oUnit-public-x230#02.log", line 8, characters 1-1:
+> Error: public:5:assignment_1_6 (in the log).
+>
+> Raised at file "src/assignment3.ml", line 70, characters 2-42
+> Called from file "test/public.ml", line 40, characters 28-38
+> Called from file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+>
+> Failure("length not implemented")
+> ------------------------------------------------------------------------------
+> ==============================================================================
+> Error: public:7:assignment_1_8.
+>
+> File "/home/hp/Documents/cs314/assignment3/_build/default/test/oUnit-public-x230#01.log", line 24, characters 1-1:
+> Error: public:7:assignment_1_8 (in the log).
+>
+> Raised at file "src/assignment3.ml", line 76, characters 2-43
+> Called from file "test/public.ml", line 53, characters 10-19
+> Called from file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+>
+> Failure("reverse not implemented")
+> ------------------------------------------------------------------------------
+> ==============================================================================
+> Error: public:6:assignment_1_7.
+>
+> File "/home/hp/Documents/cs314/assignment3/_build/default/test/oUnit-public-x230#01.log", line 16, characters 1-1:
+> Error: public:6:assignment_1_7 (in the log).
+>
+> Raised at file "src/assignment3.ml", line 70, characters 2-42
+> Called from file "test/public.ml", line 46, characters 28-40
+> Called from file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+>
+> Failure("length not implemented")
+> ------------------------------------------------------------------------------
+> ==============================================================================
+> Error: public:4:assignment_1_5.
+>
+> File "/home/hp/Documents/cs314/assignment3/_build/default/test/oUnit-public-x230#01.log", line 8, characters 1-1:
+> Error: public:4:assignment_1_5 (in the log).
+>
+> Raised at file "src/assignment3.ml", line 67, characters 2-47
+> Called from file "test/public.ml", line 35, characters 10-25
+> Called from file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+>
+> Failure("list_of_dll not implemented")
+> ------------------------------------------------------------------------------
+> Ran: 15 tests in: 0.11 seconds.
+> FAILED: Cases: 15 Tried: 15 Errors: 11 Failures: 0 Skip:  0 Todo: 0 Timeouts: 0.
+[1]
