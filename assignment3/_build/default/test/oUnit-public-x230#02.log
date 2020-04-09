@@ -1,33 +1,45 @@
-2020-04-09T01:08:02+00:00 x230#02 I: Start test public:1:assignment_1_2.
-2020-04-09T01:08:02+00:00 x230#02 I: Test public:1:assignment_1_2 is successful.
-2020-04-09T01:08:02+00:00 x230#02 I: End test public:1:assignment_1_2.
-2020-04-09T01:08:02+00:00 x230#02 I: Start test public:3:assignment_1_4.
-2020-04-09T01:08:02+00:00 x230#02 I: Test public:3:assignment_1_4 is successful.
-2020-04-09T01:08:02+00:00 x230#02 I: End test public:3:assignment_1_4.
-2020-04-09T01:08:02+00:00 x230#02 I: Start test public:6:assignment_1_7.
-2020-04-09T01:08:02+00:00 x230#02 I: Test public:6:assignment_1_7 is successful.
-2020-04-09T01:08:02+00:00 x230#02 I: End test public:6:assignment_1_7.
-2020-04-09T01:08:02+00:00 x230#02 I: Start test public:7:assignment_1_8.
-2020-04-09T01:08:02+00:00 x230#02 E: Test public:7:assignment_1_8 has failed.
-2020-04-09T01:08:02+00:00 x230#02 E: not equal in test public:7:assignment_1_8.
-2020-04-09T01:08:02+00:00 x230#02 E: Raised at file "src/lib/ounit2/advanced/oUnitAssert.ml", line 45, characters 2-27
-2020-04-09T01:08:02+00:00 x230#02 E: Called from file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
-2020-04-09T01:08:02+00:00 x230#02 E: 
-2020-04-09T01:08:02+00:00 x230#02 I: End test public:7:assignment_1_8.
-2020-04-09T01:08:02+00:00 x230#02 I: Start test public:10:assignment_2_3.
-2020-04-09T01:08:02+00:00 x230#02 E: Test public:10:assignment_2_3 exited with an error.
-2020-04-09T01:08:02+00:00 x230#02 E: Failure("SerializableArray.fold not implemented") in test public:10:assignment_2_3.
-2020-04-09T01:08:02+00:00 x230#02 E: Raised at file "src/assignment3.ml", line 131, characters 4-60
-2020-04-09T01:08:02+00:00 x230#02 E: Called from file "test/public.ml", line 63, characters 32-118
-2020-04-09T01:08:02+00:00 x230#02 E: Called from file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
-2020-04-09T01:08:02+00:00 x230#02 E: 
-2020-04-09T01:08:02+00:00 x230#02 I: End test public:10:assignment_2_3.
-2020-04-09T01:08:02+00:00 x230#02 I: Start test public:14:assignment_2_7.
-2020-04-09T01:08:02+00:00 x230#02 E: Test public:14:assignment_2_7 exited with an error.
-2020-04-09T01:08:02+00:00 x230#02 E: Failure("SerializableArray.fold not implemented") in test public:14:assignment_2_7.
-2020-04-09T01:08:02+00:00 x230#02 E: Raised at file "src/assignment3.ml", line 131, characters 4-60
-2020-04-09T01:08:02+00:00 x230#02 E: Called from file "src/assignment3.ml", line 118, characters 27-43
-2020-04-09T01:08:02+00:00 x230#02 E: Called from file "test/public.ml", line 75, characters 21-88
-2020-04-09T01:08:02+00:00 x230#02 E: Called from file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
-2020-04-09T01:08:02+00:00 x230#02 E: 
-2020-04-09T01:08:02+00:00 x230#02 I: End test public:14:assignment_2_7.
+2020-04-09T03:28:19+00:00 x230#02 I: Start test public:1:assignment_1_2.
+2020-04-09T03:28:19+00:00 x230#02 I: Test public:1:assignment_1_2 is successful.
+2020-04-09T03:28:19+00:00 x230#02 I: End test public:1:assignment_1_2.
+2020-04-09T03:28:19+00:00 x230#02 I: Start test public:3:assignment_1_4.
+2020-04-09T03:28:19+00:00 x230#02 I: Test public:3:assignment_1_4 is successful.
+2020-04-09T03:28:19+00:00 x230#02 I: End test public:3:assignment_1_4.
+2020-04-09T03:28:19+00:00 x230#02 I: Start test public:5:assignment_1_6.
+2020-04-09T03:28:19+00:00 x230#02 I: Test public:5:assignment_1_6 is successful.
+2020-04-09T03:28:19+00:00 x230#02 I: End test public:5:assignment_1_6.
+2020-04-09T03:28:19+00:00 x230#02 I: Start test public:7:assignment_1_8.
+2020-04-09T03:28:19+00:00 x230#02 E: Test public:7:assignment_1_8 has failed.
+2020-04-09T03:28:19+00:00 x230#02 E: not equal in test public:7:assignment_1_8.
+2020-04-09T03:28:19+00:00 x230#02 E: Raised at file "src/lib/ounit2/advanced/oUnitAssert.ml", line 45, characters 2-27
+2020-04-09T03:28:19+00:00 x230#02 E: Called from file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+2020-04-09T03:28:19+00:00 x230#02 E: 
+2020-04-09T03:28:19+00:00 x230#02 I: End test public:7:assignment_1_8.
+2020-04-09T03:28:19+00:00 x230#02 I: Start test public:8:assignment_2_1.
+2020-04-09T03:28:19+00:00 x230#02 E: Test public:8:assignment_2_1 has failed.
+2020-04-09T03:28:19+00:00 x230#02 E: not equal in test public:8:assignment_2_1.
+2020-04-09T03:28:19+00:00 x230#02 E: Raised at file "src/lib/ounit2/advanced/oUnitAssert.ml", line 45, characters 2-27
+2020-04-09T03:28:19+00:00 x230#02 E: Called from file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+2020-04-09T03:28:19+00:00 x230#02 E: 
+2020-04-09T03:28:19+00:00 x230#02 I: End test public:8:assignment_2_1.
+2020-04-09T03:28:19+00:00 x230#02 I: Start test public:9:assignment_2_2.
+2020-04-09T03:28:19+00:00 x230#02 E: Test public:9:assignment_2_2 has failed.
+2020-04-09T03:28:19+00:00 x230#02 E: not equal in test public:9:assignment_2_2.
+2020-04-09T03:28:19+00:00 x230#02 E: Raised at file "src/lib/ounit2/advanced/oUnitAssert.ml", line 45, characters 2-27
+2020-04-09T03:28:19+00:00 x230#02 E: Called from file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+2020-04-09T03:28:19+00:00 x230#02 E: 
+2020-04-09T03:28:19+00:00 x230#02 I: End test public:9:assignment_2_2.
+2020-04-09T03:28:19+00:00 x230#02 I: Start test public:12:assignment_2_5.
+2020-04-09T03:28:19+00:00 x230#02 E: Test public:12:assignment_2_5 exited with an error.
+2020-04-09T03:28:19+00:00 x230#02 E: Failure("SerializableArray.fold not implemented") in test public:12:assignment_2_5.
+2020-04-09T03:28:19+00:00 x230#02 E: Raised at file "src/assignment3.ml", line 131, characters 4-60
+2020-04-09T03:28:19+00:00 x230#02 E: Called from file "test/public.ml", line 69, characters 21-84
+2020-04-09T03:28:19+00:00 x230#02 E: Called from file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+2020-04-09T03:28:19+00:00 x230#02 E: 
+2020-04-09T03:28:19+00:00 x230#02 I: End test public:12:assignment_2_5.
+2020-04-09T03:28:19+00:00 x230#02 I: Start test public:13:assignment_2_6.
+2020-04-09T03:28:19+00:00 x230#02 E: Test public:13:assignment_2_6 has failed.
+2020-04-09T03:28:19+00:00 x230#02 E: not equal in test public:13:assignment_2_6.
+2020-04-09T03:28:19+00:00 x230#02 E: Raised at file "src/lib/ounit2/advanced/oUnitAssert.ml", line 45, characters 2-27
+2020-04-09T03:28:19+00:00 x230#02 E: Called from file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+2020-04-09T03:28:19+00:00 x230#02 E: 
+2020-04-09T03:28:19+00:00 x230#02 I: End test public:13:assignment_2_6.

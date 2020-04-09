@@ -1,10 +1,10 @@
 # dune runtest -f
 # OCAMLPARAM: unset
 # Workspace root: /home/hp/Documents/cs314/assignment3
-$ /usr/bin/nproc > /tmp/dunef8d2d0.output 2> /dev/null
+$ /usr/bin/nproc > /tmp/dunec133b9.output 2> /dev/null
 # Auto-detected concurrency: 4
 # disable binary cache
-$ /usr/local/bin/ocamlc.opt -config > /tmp/dune1e2a0e.output
+$ /usr/local/bin/ocamlc.opt -config > /tmp/dunec4fe3d.output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -120,30 +120,16 @@ $ (cd _build/default && /usr/local/bin/ocamlc.opt -w -40 -g -bin-annot -I src/.a
 $ (cd _build/default && /usr/local/bin/ocamlopt.opt -w -40 -g -I src/.asn3.objs/byte -I src/.asn3.objs/native -intf-suffix .ml -no-alias-deps -open Asn3 -o src/.asn3.objs/native/asn3__Assignment3.cmx -c -impl src/assignment3.ml)
 $ (cd _build/default && /usr/local/bin/ocamlopt.opt -w -40 -g -a -o src/asn3.cmxa src/.asn3.objs/native/asn3.cmx src/.asn3.objs/native/asn3__Assignment3.cmx)
 $ (cd _build/default && /usr/local/bin/ocamlc.opt -w -40 -g -bin-annot -I test/.public.eobjs/byte -I /home/hp/.opam/default/lib/bytes -I /home/hp/.opam/default/lib/oUnit -I /home/hp/.opam/default/lib/ounit2 -I /home/hp/.opam/default/lib/ounit2/advanced -I /home/hp/.opam/default/lib/qcheck -I /home/hp/.opam/default/lib/qcheck-core -I /home/hp/.opam/default/lib/qcheck-core/runner -I /home/hp/.opam/default/lib/qcheck-ounit -I /home/hp/.opam/default/lib/stdlib-shims -I src/.asn3.objs/byte -I src/.asn3.objs/native -no-alias-deps -o test/.public.eobjs/byte/testUtils.cmo -c -impl test/testUtils.ml)
-$ (cd _build/default && /usr/local/bin/ocamlc.opt -w -40 -g -bin-annot -I test/.public.eobjs/byte -I /home/hp/.opam/default/lib/bytes -I /home/hp/.opam/default/lib/oUnit -I /home/hp/.opam/default/lib/ounit2 -I /home/hp/.opam/default/lib/ounit2/advanced -I /home/hp/.opam/default/lib/qcheck -I /home/hp/.opam/default/lib/qcheck-core -I /home/hp/.opam/default/lib/qcheck-core/runner -I /home/hp/.opam/default/lib/qcheck-ounit -I /home/hp/.opam/default/lib/stdlib-shims -I src/.asn3.objs/byte -I src/.asn3.objs/native -no-alias-deps -o test/.public.eobjs/byte/public.cmo -c -impl test/public.ml)
 $ (cd _build/default && /usr/local/bin/ocamlopt.opt -w -40 -g -I test/.public.eobjs/byte -I test/.public.eobjs/native -I /home/hp/.opam/default/lib/bytes -I /home/hp/.opam/default/lib/oUnit -I /home/hp/.opam/default/lib/ounit2 -I /home/hp/.opam/default/lib/ounit2/advanced -I /home/hp/.opam/default/lib/qcheck -I /home/hp/.opam/default/lib/qcheck-core -I /home/hp/.opam/default/lib/qcheck-core/runner -I /home/hp/.opam/default/lib/qcheck-ounit -I /home/hp/.opam/default/lib/stdlib-shims -I src/.asn3.objs/byte -I src/.asn3.objs/native -intf-suffix .ml -no-alias-deps -o test/.public.eobjs/native/testUtils.cmx -c -impl test/testUtils.ml)
+$ (cd _build/default && /usr/local/bin/ocamlc.opt -w -40 -g -bin-annot -I test/.public.eobjs/byte -I /home/hp/.opam/default/lib/bytes -I /home/hp/.opam/default/lib/oUnit -I /home/hp/.opam/default/lib/ounit2 -I /home/hp/.opam/default/lib/ounit2/advanced -I /home/hp/.opam/default/lib/qcheck -I /home/hp/.opam/default/lib/qcheck-core -I /home/hp/.opam/default/lib/qcheck-core/runner -I /home/hp/.opam/default/lib/qcheck-ounit -I /home/hp/.opam/default/lib/stdlib-shims -I src/.asn3.objs/byte -I src/.asn3.objs/native -no-alias-deps -o test/.public.eobjs/byte/public.cmo -c -impl test/public.ml)
 $ (cd _build/default && /usr/local/bin/ocamlopt.opt -w -40 -g -I test/.public.eobjs/byte -I test/.public.eobjs/native -I /home/hp/.opam/default/lib/bytes -I /home/hp/.opam/default/lib/oUnit -I /home/hp/.opam/default/lib/ounit2 -I /home/hp/.opam/default/lib/ounit2/advanced -I /home/hp/.opam/default/lib/qcheck -I /home/hp/.opam/default/lib/qcheck-core -I /home/hp/.opam/default/lib/qcheck-core/runner -I /home/hp/.opam/default/lib/qcheck-ounit -I /home/hp/.opam/default/lib/stdlib-shims -I src/.asn3.objs/byte -I src/.asn3.objs/native -intf-suffix .ml -no-alias-deps -o test/.public.eobjs/native/public.cmx -c -impl test/public.ml)
 $ (cd _build/default && /usr/local/bin/ocamlopt.opt -w -40 -g -o test/public.exe src/asn3.cmxa /usr/local/lib/ocaml/unix.cmxa -I /usr/local/lib/ocaml /home/hp/.opam/default/lib/stdlib-shims/stdlib_shims.cmxa /home/hp/.opam/default/lib/ounit2/advanced/oUnitAdvanced.cmxa /home/hp/.opam/default/lib/ounit2/oUnit.cmxa /home/hp/.opam/default/lib/qcheck-core/qcheck_core.cmxa /home/hp/.opam/default/lib/qcheck-core/runner/qcheck_runner.cmxa /home/hp/.opam/default/lib/qcheck-ounit/qcheck_ounit.cmxa /home/hp/.opam/default/lib/qcheck/qcheck.cmxa test/.public.eobjs/native/testUtils.cmx test/.public.eobjs/native/public.cmx)
 $ (cd _build/default/test && ./public.exe)
-> .......FEEEEEEE
-> ==============================================================================
-> Error: public:13:assignment_2_6.
->
-> File "/home/hp/Documents/cs314/assignment3/_build/default/test/oUnit-public-x230#01.log", line 46, characters 1-1:
-> Error: public:13:assignment_2_6 (in the log).
->
-> Raised at file "src/assignment3.ml", line 128, characters 4-67
-> Called from file "src/assignment3.ml", line 111, characters 29-46
-> Called from file "src/assignment3.ml", line 113, characters 10-21
-> Called from file "test/public.ml", line 72, characters 52-120
-> Called from file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
->
-> Failure("SerializableArray.string_of_t not implemented")
-> ------------------------------------------------------------------------------
+> ......F.FFEFEFE
 > ==============================================================================
 > Error: public:14:assignment_2_7.
 >
-> File "/home/hp/Documents/cs314/assignment3/_build/default/test/oUnit-public-x230#02.log", line 26, characters 1-1:
+> File "/home/hp/Documents/cs314/assignment3/_build/default/test/oUnit-public-x230#01.log", line 29, characters 1-1:
 > Error: public:14:assignment_2_7 (in the log).
 >
 > Raised at file "src/assignment3.ml", line 131, characters 4-60
@@ -154,21 +140,9 @@ $ (cd _build/default/test && ./public.exe)
 > Failure("SerializableArray.fold not implemented")
 > ------------------------------------------------------------------------------
 > ==============================================================================
-> Error: public:10:assignment_2_3.
->
-> File "/home/hp/Documents/cs314/assignment3/_build/default/test/oUnit-public-x230#02.log", line 18, characters 1-1:
-> Error: public:10:assignment_2_3 (in the log).
->
-> Raised at file "src/assignment3.ml", line 131, characters 4-60
-> Called from file "test/public.ml", line 63, characters 32-118
-> Called from file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
->
-> Failure("SerializableArray.fold not implemented")
-> ------------------------------------------------------------------------------
-> ==============================================================================
 > Error: public:12:assignment_2_5.
 >
-> File "/home/hp/Documents/cs314/assignment3/_build/default/test/oUnit-public-x230#01.log", line 38, characters 1-1:
+> File "/home/hp/Documents/cs314/assignment3/_build/default/test/oUnit-public-x230#02.log", line 32, characters 1-1:
 > Error: public:12:assignment_2_5 (in the log).
 >
 > Raised at file "src/assignment3.ml", line 131, characters 4-60
@@ -178,40 +152,60 @@ $ (cd _build/default/test && ./public.exe)
 > Failure("SerializableArray.fold not implemented")
 > ------------------------------------------------------------------------------
 > ==============================================================================
-> Error: public:11:assignment_2_4.
+> Error: public:10:assignment_2_3.
 >
-> File "/home/hp/Documents/cs314/assignment3/_build/default/test/oUnit-public-x230#01.log", line 30, characters 1-1:
-> Error: public:11:assignment_2_4 (in the log).
+> File "/home/hp/Documents/cs314/assignment3/_build/default/test/oUnit-public-x230#01.log", line 14, characters 1-1:
+> Error: public:10:assignment_2_3 (in the log).
 >
-> Raised at file "src/assignment3.ml", line 128, characters 4-67
-> Called from file "test/public.ml", line 66, characters 48-112
+> Raised at file "src/assignment3.ml", line 131, characters 4-60
+> Called from file "test/public.ml", line 63, characters 32-118
 > Called from file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
 >
-> Failure("SerializableArray.string_of_t not implemented")
+> Failure("SerializableArray.fold not implemented")
+> ------------------------------------------------------------------------------
+> ==============================================================================
+> Error: public:13:assignment_2_6.
+>
+> File "/home/hp/Documents/cs314/assignment3/_build/default/test/oUnit-public-x230#02.log", line 40, characters 1-1:
+> Error: public:13:assignment_2_6 (in the log).
+>
+> Raised at file "src/lib/ounit2/advanced/oUnitAssert.ml", line 45, characters 2-27
+> Called from file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+>
+> not equal
+> ------------------------------------------------------------------------------
+> ==============================================================================
+> Error: public:11:assignment_2_4.
+>
+> File "/home/hp/Documents/cs314/assignment3/_build/default/test/oUnit-public-x230#01.log", line 22, characters 1-1:
+> Error: public:11:assignment_2_4 (in the log).
+>
+> Raised at file "src/lib/ounit2/advanced/oUnitAssert.ml", line 45, characters 2-27
+> Called from file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+>
+> not equal
 > ------------------------------------------------------------------------------
 > ==============================================================================
 > Error: public:9:assignment_2_2.
 >
-> File "/home/hp/Documents/cs314/assignment3/_build/default/test/oUnit-public-x230#01.log", line 22, characters 1-1:
+> File "/home/hp/Documents/cs314/assignment3/_build/default/test/oUnit-public-x230#02.log", line 25, characters 1-1:
 > Error: public:9:assignment_2_2 (in the log).
 >
-> Raised at file "src/assignment3.ml", line 128, characters 4-67
-> Called from file "test/public.ml", line 60, characters 48-115
+> Raised at file "src/lib/ounit2/advanced/oUnitAssert.ml", line 45, characters 2-27
 > Called from file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
 >
-> Failure("SerializableArray.string_of_t not implemented")
+> not equal
 > ------------------------------------------------------------------------------
 > ==============================================================================
 > Error: public:8:assignment_2_1.
 >
-> File "/home/hp/Documents/cs314/assignment3/_build/default/test/oUnit-public-x230#01.log", line 14, characters 1-1:
+> File "/home/hp/Documents/cs314/assignment3/_build/default/test/oUnit-public-x230#02.log", line 18, characters 1-1:
 > Error: public:8:assignment_2_1 (in the log).
 >
-> Raised at file "src/assignment3.ml", line 128, characters 4-67
-> Called from file "test/public.ml", line 57, characters 30-74
+> Raised at file "src/lib/ounit2/advanced/oUnitAssert.ml", line 45, characters 2-27
 > Called from file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
 >
-> Failure("SerializableArray.string_of_t not implemented")
+> not equal
 > ------------------------------------------------------------------------------
 > ==============================================================================
 > Error: public:7:assignment_1_8.
@@ -224,6 +218,6 @@ $ (cd _build/default/test && ./public.exe)
 >
 > not equal
 > ------------------------------------------------------------------------------
-> Ran: 15 tests in: 0.12 seconds.
-> FAILED: Cases: 15 Tried: 15 Errors: 7 Failures: 1 Skip:  0 Todo: 0 Timeouts: 0.
+> Ran: 15 tests in: 0.11 seconds.
+> FAILED: Cases: 15 Tried: 15 Errors: 3 Failures: 5 Skip:  0 Todo: 0 Timeouts: 0.
 [1]

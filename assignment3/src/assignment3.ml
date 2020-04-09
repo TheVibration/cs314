@@ -125,7 +125,7 @@ module SerializableArray (C : Serializable) = struct
   type content = C.t
 
   let string_of_t l =
-    raise (Failure "SerializableArray.string_of_t not implemented")
+    "[" ^ (Array.fold_left (fun acc v -> acc ^ (C.string_of_t v)) "" l) ^ "]"
 
   let fold f accum l =
     raise (Failure "SerializableArray.fold not implemented")
