@@ -113,7 +113,11 @@ module SerializableList (C : Serializable) = struct
     "[" ^ (loop "" l) ^ "]"
 
   let fold f accum l =
-    raise (Failure "SerializableList.fold not implemented")
+    let rec fold_loop f acc l = match l with
+    | [] -> acc
+    | x::xs -> fold_loop f (C.fold f acc x) xs
+    in
+    fold_loop f accum l
 end
 
 module SerializableArray (C : Serializable) = struct
