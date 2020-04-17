@@ -51,8 +51,12 @@ aux([H|T],Acc,Rem) :- append(Acc,[H],Z),aux(T,Z,Rem).
 ?- remove_duplicates([1,4,5,4,2,7,5,1,3],X).
 ?- remove_duplicates([], X).
 
-/* YOUR CODE HERE (Prolem 7, delete the following line) */
-intersectionL(L1,L2,L3) :- false.
+intersectionL([],[],[]).
+intersectionL([],L2,[]).
+intersectionL(L1,[],[]).
+
+intersectionL([H|T],L2,[H|Tail]) :- memberL(H,L2),intersectionL(T,L2, Tail).
+intersectionL([H|T],L2,Z) :- intersectionL(T,L2,Z).
 
 ?- intersectionL([1,2,3,4],[1,3,5,6],[1,3]).
 ?- intersectionL([1,2,3,4],[1,3,5,6],X).
