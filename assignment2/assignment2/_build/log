@@ -1,10 +1,10 @@
 # dune exec src/assignment2.exe
 # OCAMLPARAM: unset
 # Workspace root: /home/harsh/Documents/cs314/assignment2/assignment2
-$ /usr/bin/nproc > /tmp/dune93f955.output 2> /dev/null
+$ /usr/bin/nproc > /tmp/dunef1dc47.output 2> /dev/null
 # Auto-detected concurrency: 4
 # disable binary cache
-$ /usr/bin/ocamlc.opt -config > /tmp/dunef25b72.output
+$ /usr/bin/ocamlc.opt -config > /tmp/dunef62116.output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -36,7 +36,7 @@ $ /usr/bin/ocamlc.opt -config > /tmp/dunef25b72.output
 #  ; natdynlink_supported = true
 #  ; supports_shared_libraries = true
 #  ; ocaml_config =
-#      { version = "4.09.0"
+#      { version = "4.09.1"
 #      ; standard_library_default = "/usr/lib/ocaml"
 #      ; standard_library = "/usr/lib/ocaml"
 #      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
@@ -102,9 +102,3 @@ $ /usr/bin/ocamlc.opt -config > /tmp/dunef25b72.output
 #      }
 #  }
 # Workspace root: /home/harsh/Documents/cs314/assignment2/assignment2
-$ (cd _build/default && /usr/bin/ocamldep.opt -modules -impl src/lambda.ml) > _build/default/src/.assignment2.eobjs/lambda.ml.d
-$ (cd _build/default && /usr/bin/ocamlc.opt -w -40 -g -bin-annot -I src/.assignment2.eobjs/byte -no-alias-deps -o src/.assignment2.eobjs/byte/lambda.cmo -c -impl src/lambda.ml)
-$ (cd _build/default && /usr/bin/ocamlc.opt -w -40 -g -bin-annot -I src/.assignment2.eobjs/byte -no-alias-deps -o src/.assignment2.eobjs/byte/assignment2.cmo -c -impl src/assignment2.ml)
-$ (cd _build/default && /usr/bin/ocamlopt.opt -w -40 -g -I src/.assignment2.eobjs/byte -I src/.assignment2.eobjs/native -intf-suffix .ml -no-alias-deps -o src/.assignment2.eobjs/native/lambda.cmx -c -impl src/lambda.ml)
-$ (cd _build/default && /usr/bin/ocamlopt.opt -w -40 -g -I src/.assignment2.eobjs/byte -I src/.assignment2.eobjs/native -intf-suffix .ml -no-alias-deps -o src/.assignment2.eobjs/native/assignment2.cmx -c -impl src/assignment2.ml)
-$ (cd _build/default && /usr/bin/ocamlopt.opt -w -40 -g -o src/assignment2.exe src/.assignment2.eobjs/native/error.cmx src/.assignment2.eobjs/native/syntax.cmx src/.assignment2.eobjs/native/lambda_parser.cmx src/.assignment2.eobjs/native/lambda_lexer.cmx src/.assignment2.eobjs/native/lambda_parse.cmx src/.assignment2.eobjs/native/lambda.cmx src/.assignment2.eobjs/native/assignment2.cmx)
