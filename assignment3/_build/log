@@ -1,0 +1,223 @@
+# dune runtest -f
+# OCAMLPARAM: unset
+# Workspace root: /home/hp/Documents/cs314/assignment3
+$ /usr/bin/nproc > /tmp/dunec133b9.output 2> /dev/null
+# Auto-detected concurrency: 4
+# disable binary cache
+$ /usr/local/bin/ocamlc.opt -config > /tmp/dunec4fe3d.output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Release
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path = Some External "/home/hp/.opam/default/lib/toplevel"
+#  ; ocaml_bin = External "/usr/local/bin"
+#  ; ocaml = External "/home/hp/.opam/default/bin/ocaml"
+#  ; ocamlc = External "/usr/local/bin/ocamlc.opt"
+#  ; ocamlopt = Some External "/usr/local/bin/ocamlopt.opt"
+#  ; ocamldep = External "/usr/local/bin/ocamldep.opt"
+#  ; ocamlmklib = External "/usr/local/bin/ocamlmklib.opt"
+#  ;
+#  env =
+#    map
+#      { "DUNE_CONFIGURATOR" : "/usr/local/bin/ocamlc.opt"
+#      ; "INSIDE_DUNE" : "1"
+#      ;
+#      "OCAMLFIND_IGNORE_DUPS_IN" :
+#        "/home/hp/Documents/cs314/assignment3/_build/install/default/lib"
+#      ;
+#      "OCAMLPATH" :
+#        "/home/hp/Documents/cs314/assignment3/_build/install/default/lib"
+#      ; "OCAML_COLOR" : "always"
+#      ; "OPAMCOLOR" : "always"
+#      }
+#  ; findlib_path = [ External "/home/hp/.opam/default/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; opam_vars = map {}
+#  ;
+#  ocaml_config =
+#    { version = "4.09.0"
+#    ; standard_library_default = "/usr/local/lib/ocaml"
+#    ; standard_library = "/usr/local/lib/ocaml"
+#    ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#    ; ccomp_type = "cc"
+#    ; c_compiler = "gcc"
+#    ; ocamlc_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-fPIC" ]
+#    ; ocamlopt_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#    ;
+#    bytecomp_c_compiler =
+#      [ "gcc"
+#      ; "-O2"
+#      ; "-fno-strict-aliasing"
+#      ; "-fwrapv"
+#      ; "-fPIC"
+#      ; "-D_FILE_OFFSET_BITS=64"
+#      ; "-D_REENTRANT"
+#      ]
+#    ; bytecomp_c_libraries = [ "-lm"; "-ldl"; "-lpthread" ]
+#    ;
+#    native_c_compiler =
+#      [ "gcc"
+#      ; "-O2"
+#      ; "-fno-strict-aliasing"
+#      ; "-fwrapv"
+#      ; "-D_FILE_OFFSET_BITS=64"
+#      ; "-D_REENTRANT"
+#      ]
+#    ; native_c_libraries = [ "-lm"; "-ldl" ]
+#    ; cc_profile = []
+#    ; architecture = "amd64"
+#    ; model = "default"
+#    ; int_size = 63
+#    ; word_size = 64
+#    ; system = "linux"
+#    ; asm = [ "as" ]
+#    ; asm_cfi_supported = true
+#    ; with_frame_pointers = false
+#    ; ext_exe = ""
+#    ; ext_obj = ".o"
+#    ; ext_asm = ".s"
+#    ; ext_lib = ".a"
+#    ; ext_dll = ".so"
+#    ; os_type = "Unix"
+#    ; default_executable_name = "a.out"
+#    ; systhread_supported = true
+#    ; host = "x86_64-pc-linux-gnu"
+#    ; target = "x86_64-pc-linux-gnu"
+#    ; profiling = false
+#    ; flambda = false
+#    ; spacetime = false
+#    ; safe_string = false
+#    ; exec_magic_number = "Caml1999X026"
+#    ; cmi_magic_number = "Caml1999I026"
+#    ; cmo_magic_number = "Caml1999O026"
+#    ; cma_magic_number = "Caml1999A026"
+#    ; cmx_magic_number = "Caml1999Y026"
+#    ; cmxa_magic_number = "Caml1999Z026"
+#    ; ast_impl_magic_number = "Caml1999M026"
+#    ; ast_intf_magic_number = "Caml1999N026"
+#    ; cmxs_magic_number = "Caml1999D026"
+#    ; cmt_magic_number = "Caml1999T026"
+#    ; natdynlink_supported = true
+#    ; supports_shared_libraries = true
+#    ; windows_unicode = false
+#    }
+#  ;
+#  which =
+#    map
+#      { "ocaml" : Some External "/home/hp/.opam/default/bin/ocaml"
+#      ; "ocamlc" : Some External "/usr/local/bin/ocamlc.opt"
+#      ; "ocamlobjinfo" : Some External "/usr/local/bin/ocamlobjinfo.opt"
+#      }
+#  }
+$ (cd _build/default && /usr/local/bin/ocamldep.opt -modules -impl src/assignment3.ml) > _build/default/src/.asn3.objs/assignment3.ml.d
+$ (cd _build/default && /usr/local/bin/ocamlc.opt -w -40 -g -bin-annot -I src/.asn3.objs/byte -no-alias-deps -open Asn3 -o src/.asn3.objs/byte/asn3__Assignment3.cmo -c -impl src/assignment3.ml)
+$ (cd _build/default && /usr/local/bin/ocamlopt.opt -w -40 -g -I src/.asn3.objs/byte -I src/.asn3.objs/native -intf-suffix .ml -no-alias-deps -open Asn3 -o src/.asn3.objs/native/asn3__Assignment3.cmx -c -impl src/assignment3.ml)
+$ (cd _build/default && /usr/local/bin/ocamlopt.opt -w -40 -g -a -o src/asn3.cmxa src/.asn3.objs/native/asn3.cmx src/.asn3.objs/native/asn3__Assignment3.cmx)
+$ (cd _build/default && /usr/local/bin/ocamlc.opt -w -40 -g -bin-annot -I test/.public.eobjs/byte -I /home/hp/.opam/default/lib/bytes -I /home/hp/.opam/default/lib/oUnit -I /home/hp/.opam/default/lib/ounit2 -I /home/hp/.opam/default/lib/ounit2/advanced -I /home/hp/.opam/default/lib/qcheck -I /home/hp/.opam/default/lib/qcheck-core -I /home/hp/.opam/default/lib/qcheck-core/runner -I /home/hp/.opam/default/lib/qcheck-ounit -I /home/hp/.opam/default/lib/stdlib-shims -I src/.asn3.objs/byte -I src/.asn3.objs/native -no-alias-deps -o test/.public.eobjs/byte/testUtils.cmo -c -impl test/testUtils.ml)
+$ (cd _build/default && /usr/local/bin/ocamlopt.opt -w -40 -g -I test/.public.eobjs/byte -I test/.public.eobjs/native -I /home/hp/.opam/default/lib/bytes -I /home/hp/.opam/default/lib/oUnit -I /home/hp/.opam/default/lib/ounit2 -I /home/hp/.opam/default/lib/ounit2/advanced -I /home/hp/.opam/default/lib/qcheck -I /home/hp/.opam/default/lib/qcheck-core -I /home/hp/.opam/default/lib/qcheck-core/runner -I /home/hp/.opam/default/lib/qcheck-ounit -I /home/hp/.opam/default/lib/stdlib-shims -I src/.asn3.objs/byte -I src/.asn3.objs/native -intf-suffix .ml -no-alias-deps -o test/.public.eobjs/native/testUtils.cmx -c -impl test/testUtils.ml)
+$ (cd _build/default && /usr/local/bin/ocamlc.opt -w -40 -g -bin-annot -I test/.public.eobjs/byte -I /home/hp/.opam/default/lib/bytes -I /home/hp/.opam/default/lib/oUnit -I /home/hp/.opam/default/lib/ounit2 -I /home/hp/.opam/default/lib/ounit2/advanced -I /home/hp/.opam/default/lib/qcheck -I /home/hp/.opam/default/lib/qcheck-core -I /home/hp/.opam/default/lib/qcheck-core/runner -I /home/hp/.opam/default/lib/qcheck-ounit -I /home/hp/.opam/default/lib/stdlib-shims -I src/.asn3.objs/byte -I src/.asn3.objs/native -no-alias-deps -o test/.public.eobjs/byte/public.cmo -c -impl test/public.ml)
+$ (cd _build/default && /usr/local/bin/ocamlopt.opt -w -40 -g -I test/.public.eobjs/byte -I test/.public.eobjs/native -I /home/hp/.opam/default/lib/bytes -I /home/hp/.opam/default/lib/oUnit -I /home/hp/.opam/default/lib/ounit2 -I /home/hp/.opam/default/lib/ounit2/advanced -I /home/hp/.opam/default/lib/qcheck -I /home/hp/.opam/default/lib/qcheck-core -I /home/hp/.opam/default/lib/qcheck-core/runner -I /home/hp/.opam/default/lib/qcheck-ounit -I /home/hp/.opam/default/lib/stdlib-shims -I src/.asn3.objs/byte -I src/.asn3.objs/native -intf-suffix .ml -no-alias-deps -o test/.public.eobjs/native/public.cmx -c -impl test/public.ml)
+$ (cd _build/default && /usr/local/bin/ocamlopt.opt -w -40 -g -o test/public.exe src/asn3.cmxa /usr/local/lib/ocaml/unix.cmxa -I /usr/local/lib/ocaml /home/hp/.opam/default/lib/stdlib-shims/stdlib_shims.cmxa /home/hp/.opam/default/lib/ounit2/advanced/oUnitAdvanced.cmxa /home/hp/.opam/default/lib/ounit2/oUnit.cmxa /home/hp/.opam/default/lib/qcheck-core/qcheck_core.cmxa /home/hp/.opam/default/lib/qcheck-core/runner/qcheck_runner.cmxa /home/hp/.opam/default/lib/qcheck-ounit/qcheck_ounit.cmxa /home/hp/.opam/default/lib/qcheck/qcheck.cmxa test/.public.eobjs/native/testUtils.cmx test/.public.eobjs/native/public.cmx)
+$ (cd _build/default/test && ./public.exe)
+> ......F.FFEFEFE
+> ==============================================================================
+> Error: public:14:assignment_2_7.
+>
+> File "/home/hp/Documents/cs314/assignment3/_build/default/test/oUnit-public-x230#01.log", line 29, characters 1-1:
+> Error: public:14:assignment_2_7 (in the log).
+>
+> Raised at file "src/assignment3.ml", line 131, characters 4-60
+> Called from file "src/assignment3.ml", line 118, characters 27-43
+> Called from file "test/public.ml", line 75, characters 21-88
+> Called from file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+>
+> Failure("SerializableArray.fold not implemented")
+> ------------------------------------------------------------------------------
+> ==============================================================================
+> Error: public:12:assignment_2_5.
+>
+> File "/home/hp/Documents/cs314/assignment3/_build/default/test/oUnit-public-x230#02.log", line 32, characters 1-1:
+> Error: public:12:assignment_2_5 (in the log).
+>
+> Raised at file "src/assignment3.ml", line 131, characters 4-60
+> Called from file "test/public.ml", line 69, characters 21-84
+> Called from file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+>
+> Failure("SerializableArray.fold not implemented")
+> ------------------------------------------------------------------------------
+> ==============================================================================
+> Error: public:10:assignment_2_3.
+>
+> File "/home/hp/Documents/cs314/assignment3/_build/default/test/oUnit-public-x230#01.log", line 14, characters 1-1:
+> Error: public:10:assignment_2_3 (in the log).
+>
+> Raised at file "src/assignment3.ml", line 131, characters 4-60
+> Called from file "test/public.ml", line 63, characters 32-118
+> Called from file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+>
+> Failure("SerializableArray.fold not implemented")
+> ------------------------------------------------------------------------------
+> ==============================================================================
+> Error: public:13:assignment_2_6.
+>
+> File "/home/hp/Documents/cs314/assignment3/_build/default/test/oUnit-public-x230#02.log", line 40, characters 1-1:
+> Error: public:13:assignment_2_6 (in the log).
+>
+> Raised at file "src/lib/ounit2/advanced/oUnitAssert.ml", line 45, characters 2-27
+> Called from file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+>
+> not equal
+> ------------------------------------------------------------------------------
+> ==============================================================================
+> Error: public:11:assignment_2_4.
+>
+> File "/home/hp/Documents/cs314/assignment3/_build/default/test/oUnit-public-x230#01.log", line 22, characters 1-1:
+> Error: public:11:assignment_2_4 (in the log).
+>
+> Raised at file "src/lib/ounit2/advanced/oUnitAssert.ml", line 45, characters 2-27
+> Called from file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+>
+> not equal
+> ------------------------------------------------------------------------------
+> ==============================================================================
+> Error: public:9:assignment_2_2.
+>
+> File "/home/hp/Documents/cs314/assignment3/_build/default/test/oUnit-public-x230#02.log", line 25, characters 1-1:
+> Error: public:9:assignment_2_2 (in the log).
+>
+> Raised at file "src/lib/ounit2/advanced/oUnitAssert.ml", line 45, characters 2-27
+> Called from file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+>
+> not equal
+> ------------------------------------------------------------------------------
+> ==============================================================================
+> Error: public:8:assignment_2_1.
+>
+> File "/home/hp/Documents/cs314/assignment3/_build/default/test/oUnit-public-x230#02.log", line 18, characters 1-1:
+> Error: public:8:assignment_2_1 (in the log).
+>
+> Raised at file "src/lib/ounit2/advanced/oUnitAssert.ml", line 45, characters 2-27
+> Called from file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+>
+> not equal
+> ------------------------------------------------------------------------------
+> ==============================================================================
+> Error: public:7:assignment_1_8.
+>
+> File "/home/hp/Documents/cs314/assignment3/_build/default/test/oUnit-public-x230#02.log", line 11, characters 1-1:
+> Error: public:7:assignment_1_8 (in the log).
+>
+> Raised at file "src/lib/ounit2/advanced/oUnitAssert.ml", line 45, characters 2-27
+> Called from file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+>
+> not equal
+> ------------------------------------------------------------------------------
+> Ran: 15 tests in: 0.11 seconds.
+> FAILED: Cases: 15 Tried: 15 Errors: 3 Failures: 5 Skip:  0 Todo: 0 Timeouts: 0.
+[1]

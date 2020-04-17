@@ -1,0 +1,36 @@
+2020-04-09T03:28:19+00:00 x230#01 I: Start test public:0:assignment_1_1.
+2020-04-09T03:28:19+00:00 x230#01 I: Test public:0:assignment_1_1 is successful.
+2020-04-09T03:28:19+00:00 x230#01 I: End test public:0:assignment_1_1.
+2020-04-09T03:28:19+00:00 x230#01 I: Start test public:2:assignment_1_3.
+2020-04-09T03:28:19+00:00 x230#01 I: Test public:2:assignment_1_3 is successful.
+2020-04-09T03:28:19+00:00 x230#01 I: End test public:2:assignment_1_3.
+2020-04-09T03:28:19+00:00 x230#01 I: Start test public:4:assignment_1_5.
+2020-04-09T03:28:19+00:00 x230#01 I: Test public:4:assignment_1_5 is successful.
+2020-04-09T03:28:19+00:00 x230#01 I: End test public:4:assignment_1_5.
+2020-04-09T03:28:19+00:00 x230#01 I: Start test public:6:assignment_1_7.
+2020-04-09T03:28:19+00:00 x230#01 I: Test public:6:assignment_1_7 is successful.
+2020-04-09T03:28:19+00:00 x230#01 I: End test public:6:assignment_1_7.
+2020-04-09T03:28:19+00:00 x230#01 I: Start test public:10:assignment_2_3.
+2020-04-09T03:28:19+00:00 x230#01 E: Test public:10:assignment_2_3 exited with an error.
+2020-04-09T03:28:19+00:00 x230#01 E: Failure("SerializableArray.fold not implemented") in test public:10:assignment_2_3.
+2020-04-09T03:28:19+00:00 x230#01 E: Raised at file "src/assignment3.ml", line 131, characters 4-60
+2020-04-09T03:28:19+00:00 x230#01 E: Called from file "test/public.ml", line 63, characters 32-118
+2020-04-09T03:28:19+00:00 x230#01 E: Called from file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+2020-04-09T03:28:19+00:00 x230#01 E: 
+2020-04-09T03:28:19+00:00 x230#01 I: End test public:10:assignment_2_3.
+2020-04-09T03:28:19+00:00 x230#01 I: Start test public:11:assignment_2_4.
+2020-04-09T03:28:19+00:00 x230#01 E: Test public:11:assignment_2_4 has failed.
+2020-04-09T03:28:19+00:00 x230#01 E: not equal in test public:11:assignment_2_4.
+2020-04-09T03:28:19+00:00 x230#01 E: Raised at file "src/lib/ounit2/advanced/oUnitAssert.ml", line 45, characters 2-27
+2020-04-09T03:28:19+00:00 x230#01 E: Called from file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+2020-04-09T03:28:19+00:00 x230#01 E: 
+2020-04-09T03:28:19+00:00 x230#01 I: End test public:11:assignment_2_4.
+2020-04-09T03:28:19+00:00 x230#01 I: Start test public:14:assignment_2_7.
+2020-04-09T03:28:19+00:00 x230#01 E: Test public:14:assignment_2_7 exited with an error.
+2020-04-09T03:28:19+00:00 x230#01 E: Failure("SerializableArray.fold not implemented") in test public:14:assignment_2_7.
+2020-04-09T03:28:19+00:00 x230#01 E: Raised at file "src/assignment3.ml", line 131, characters 4-60
+2020-04-09T03:28:19+00:00 x230#01 E: Called from file "src/assignment3.ml", line 118, characters 27-43
+2020-04-09T03:28:19+00:00 x230#01 E: Called from file "test/public.ml", line 75, characters 21-88
+2020-04-09T03:28:19+00:00 x230#01 E: Called from file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+2020-04-09T03:28:19+00:00 x230#01 E: 
+2020-04-09T03:28:19+00:00 x230#01 I: End test public:14:assignment_2_7.
