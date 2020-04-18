@@ -62,25 +62,44 @@ intersectionL([H|T],L2,Z) :- intersectionL(T,L2,Z).
 ?- intersectionL([1,2,3,4],[1,3,5,6],X).
 ?- intersectionL([1,2,3],[4,3],[3]).
 
-/* YOUR CODE HERE (Prolem 8, delete the following line) */
 prefix(P,L) :- append(P,_,L).
 suffix(S,L) :- append(_,S,L).
 
-partition(L,P,S) :- false.
+partition([],[],[]).
+partition([H],[H],[]).
+partition(L,P,S) :- length(L,N), PLen is div(N,2), SLen is (N - div(N,2)), length(P,PLen), length(S, SLen), prefix(P,L), suffix(S,L).
 
 ?- partition([a],[a],[]).
 ?- partition([1,2,3],[1],[2,3]).
 ?- partition([a,b,c,d],X,Y).
 
-/* YOUR CODE HERE (Prolem 9, delete the following line) */
-merge(X,Y,Z) :- false.
+merge([], List, List).
+merge(List, [], List).
+
+merge([MinList1|RestList1], [MinList2|RestList2], [MinList1|RestMerged]) :- 
+    MinList1 =< MinList2,
+    merge(RestList1,[MinList2|RestList2],RestMerged).
+
+merge([MinList1|RestList1], [MinList2|RestList2], [MinList2|RestMerged]) :-
+    MinList2 =< MinList1,
+    merge([MinList1|RestList1],RestList2,RestMerged).
 
 ?- merge([],[1],[1]).
 ?- merge([1],[],[1]).
 ?- merge([1,3,5],[2,4,6],X).
 
-/* YOUR CODE HERE (Prolem 10, delete the following line) */
-mergesort(L,SL) :- false.
+mergesort([], []).
+mergesort([H|[]],[H]).
+mergesort(List, Sorted) :-
+    length(List, N),
+    FirstLength is //(N, 2),
+    SecondLength is N - FirstLength,
+    length(FirstUnsorted, FirstLength),
+    length(SecondUnsorted, SecondLength),
+    append(FirstUnsorted, SecondUnsorted, List),
+    mergesort(FirstUnsorted,FirstSorted),
+    mergesort(SecondUnsorted,SecondSorted),
+    merge(FirstSorted, SecondSorted,Sorted).
 
 ?- mergesort([3,2,1],X).
 ?- mergesort([1,2,3],Y).

@@ -1,15 +1,38 @@
-memberL(X,[]) :- false.
-memberL(X,[X | T]).
-memberL(X,[H | T]) :- memberL(X,T).
+partition([],[],[]).
+partition([H],[H],[]).
+partition(L,P,S) :- length(L,N), PLen is div(N,2), SLen is (N - div(N,2)).
 
-reverseL([],[]).
-reverseL([H | T],RevX) :- reverseL(T,R), append(R, [H], RevX).
+partList(Len,[],[]). 
+partList(Len,L,[H|T]):- length(H,Len),append(H,LT,L),partList(Len,LT,T).
+
+merge(List, List, []).
+merge(List, [], List).
+
+merge([MinList1|RestMerged], [MinList1|RestList1], [MinList2|RestList2]) :- 
+    MinList1 =< MinList2,
+    merge(RestMerged,RestList1,[MinList2|RestList2]).
+
+merge([MinList2|RestMerged], [MinList1|RestList1], [MinList2|RestList2]) :-
+    MinList2 =< MinList1,
+    merge(RestMerged,[MinList1|RestList1],RestList2).
+
+mergeSort([], []).
+mergeSort([A|[]],[A]).
+
+mergeSort(List, Sorted) :-
+    length(List, N),
+    FirstLength is //(N, 2),
+    SecondLength is N - FirstLength,
+    length(FirstUnsorted, FirstLength),
+    length(SecondUnsorted, SecondLength),
+    append(FirstUnsorted, SecondUnsorted, List),
+    mergeSort(FirstUnsorted,FirstSorted),
+    mergeSort(SecondUnsorted,SecondSorted),
+    merge(FirstSorted, SecondSorted,Sorted).
+
+  
+  
 
 
-remove_duplicates(L1,L2) :- aux(L1,[],L2).
-
-aux([],Acc,Acc).
-aux([H|T],Acc,Rem) :- memberL(H,Acc), aux(T,Acc,Rem).
-aux([H|T],Acc,Rem) :- append(Acc,[H],Z),aux(T,Z,Rem).
 
 
