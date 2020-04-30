@@ -58,9 +58,9 @@ let rule h b = Rule (h,b)
 (* Problem 1 *)
 let rec occurs_check v t =
   match t with
-	  | Constant(x) -> false
+    | Constant(x) -> false
     | Variable(x) -> t = v
-		| Function(fun_name,l) -> List.fold_left(fun acc x -> if (occurs_check v x) then true else acc) false l
+    | Function(fun_name,l) -> List.fold_left(fun acc x -> if (occurs_check v x) then true else acc) false l
 
 (* Problem 2 *)
 
