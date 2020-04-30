@@ -1,3 +1,7 @@
+ /* Harsh Patel */
+ /* netid: hbp45 */
+ /* ruid: 159003108 */
+
  range(S,E,M) :- M >= S, M =< E.
 
 ?- range(1,2,2).
@@ -73,16 +77,10 @@ partition(L,P,S) :- length(L,N), PLen is div(N,2), SLen is (N - div(N,2)), lengt
 ?- partition([1,2,3],[1],[2,3]).
 ?- partition([a,b,c,d],X,Y).
 
-merge([], List, List).
-merge(List, [], List).
-
-merge([MinList1|RestList1], [MinList2|RestList2], [MinList1|RestMerged]) :- 
-    MinList1 =< MinList2,
-    merge(RestList1,[MinList2|RestList2],RestMerged).
-
-merge([MinList1|RestList1], [MinList2|RestList2], [MinList2|RestMerged]) :-
-    MinList2 =< MinList1,
-    merge([MinList1|RestList1],RestList2,RestMerged).
+merge([], L, L).
+merge(L, [], L).
+merge([H|T], [H2|T2], [H|Z]) :- H =< H2, merge(T,[H2|T2],Z).
+merge([H|T], [H2|T2], [H2|Z]) :- H2 =< H, merge([H|T],T2,Z).
 
 ?- merge([],[1],[1]).
 ?- merge([1],[],[1]).
@@ -90,16 +88,16 @@ merge([MinList1|RestList1], [MinList2|RestList2], [MinList2|RestMerged]) :-
 
 mergesort([], []).
 mergesort([H|[]],[H]).
-mergesort(List, Sorted) :-
-    length(List, N),
-    FirstLength is //(N, 2),
-    SecondLength is N - FirstLength,
-    length(FirstUnsorted, FirstLength),
-    length(SecondUnsorted, SecondLength),
-    append(FirstUnsorted, SecondUnsorted, List),
-    mergesort(FirstUnsorted,FirstSorted),
-    mergesort(SecondUnsorted,SecondSorted),
-    merge(FirstSorted, SecondSorted,Sorted).
+mergesort(L, S) :-
+    length(L, N),
+    Len1 is //(N, 2),
+    Len2 is N - Len1,
+    length(List1, Len1),
+    length(List2, Len2),
+    append(List1, List2, L),
+    mergesort(List1,SList1),
+    mergesort(List2,SList2),
+    merge(SList1, SList2,S).
 
 ?- mergesort([3,2,1],X).
 ?- mergesort([1,2,3],Y).
