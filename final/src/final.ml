@@ -67,8 +67,28 @@ let rec occurs_check v t =
 module VarSet = Set.Make(struct type t = term let compare = Stdlib.compare end)
 (* API Docs for Set : https://caml.inria.fr/pub/docs/manual-ocaml/libref/Set.S.html *)
 
+(*
 let rec variables_of_term t =
-  raise (Failure "Problem 2 Not implemented")
+  let varset_ds = VarSet.empty in
+  match t with
+  |Constant(x) -> varset_ds
+  |Variable(x) -> varset_ds
+  |Function(_,lst) -> 
+    let rec loop acc l = 
+      match lst with
+      |[] -> acc
+      |x::xs -> 
+      match x with
+      |Constant(x) -> loop acc xs
+      |Variable(x) -> loop (VarSet.add x varset_ds) xs
+    in loop t varset_ds lst
+*)
+let rec variables_of_term t = 
+  let varset_ds = VarSet.empty in
+  match t with
+  |Constant(x) -> VarSet.empty
+  |Variable(x) -> VarSet.singleton t
+  |Function(_,l) -> List.fold_left(fun acc x -> (VarSet.union (variables_of_term x) (acc))) varset_ds l
 
 let variables_of_clause c =
   raise (Failure "Problem 2 Not implemented")
