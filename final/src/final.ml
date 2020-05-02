@@ -91,7 +91,10 @@ let rec variables_of_term t =
   |Function(_,l) -> List.fold_left(fun acc x -> (VarSet.union (variables_of_term x) (acc))) varset_ds l
 
 let variables_of_clause c =
-  raise (Failure "Problem 2 Not implemented")
+  let varset_ds = VarSet.empty in
+  match c with
+  |Fact(f) -> variables_of_term f
+  |Rule(h,b) -> VarSet.union (variables_of_term h) (List.fold_left(fun acc x -> (VarSet.union (variables_of_term x) (acc))) varset_ds b)
 
 (* Problem 3 *)
 
