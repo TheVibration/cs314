@@ -28,7 +28,7 @@ let test_final_2_3 ctxt =
 
 let test_final_2_4 ctxt =
   assert_equal true @@  (VarSet.equal (variables_of_clause (rule (func "p" [var "X"; var "Y"; const "a"]) [func "q" [const "a"; const "b"; const "a"]]))
-          (VarSet.of_list [var "X"; var "Y"]))
+          (VarSet.of_list [var "X"; var "Z"]))
 
 
 let s =

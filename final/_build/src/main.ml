@@ -28,6 +28,10 @@ let test_final_2_4 ctxt =
   assert (VarSet.equal (variables_of_clause (rule (func "p" [var "X"; var "Y"; const "a"]) [func "q" [const "a"; const "b"; const "a"]]))
           (VarSet.of_list [var "X"; var "Y"]))
 
+let test_final_2_5 ctxt =
+  assert (VarSet.equal (variables_of_clause (rule (func "p" [var "X"; var "Y"; var "Z"; const "a"]) [func "q" [const "a"; const "b"; const "a"; var "A"; var "X"]]))
+          (VarSet.of_list [var "X"; var "Y"; var "Z"; var "A"; var "X"]))
+
 
 let s =
   Substitution.add (var "Y") (const "0") (Substitution.add (var "X") (var "Y") Substitution.empty)
@@ -226,6 +230,7 @@ test_final_2_1 ();
 test_final_2_2 ();
 test_final_2_3 ();
 test_final_2_4 ();
+test_final_2_5 ();
 test_final_3_1 ();
 test_final_3_2 ();
 test_final_3_3 ();
