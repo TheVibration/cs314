@@ -1,10 +1,10 @@
 # dune runtest -f
 # OCAMLPARAM: unset
 # Workspace root: /home/harsh/Documents/cs314/final
-$ /usr/bin/nproc > /tmp/dune21b72c.output 2> /dev/null
+$ /usr/bin/nproc > /tmp/dune983644.output 2> /dev/null
 # Auto-detected concurrency: 4
 # disable binary cache
-$ /usr/bin/ocamlc.opt -config > /tmp/dune0cf62e.output
+$ /usr/bin/ocamlc.opt -config > /tmp/dune510984.output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -100,7 +100,11 @@ $ /usr/bin/ocamlc.opt -config > /tmp/dune0cf62e.output
 #      ; windows_unicode = false
 #      }
 #  }
+$ (cd _build/default && /usr/bin/ocamlc.opt -w -40 -w -49 -nopervasives -nostdlib -g -bin-annot -I src/.cs314.objs/byte -no-alias-deps -o src/.cs314.objs/byte/cs314.cmo -c -impl src/cs314.ml-gen)
 $ (cd _build/default && /usr/bin/ocamldep.opt -modules -impl src/final.ml) > _build/default/src/.cs314.objs/final.ml.d
+$ (cd _build/default && /usr/bin/ocamldep.opt -modules -impl test/testUtils.ml) > _build/default/test/.public.eobjs/testUtils.ml.d
+$ (cd _build/default && /usr/bin/ocamldep.opt -modules -impl test/public.ml) > _build/default/test/.public.eobjs/public.ml.d
+$ (cd _build/default && /usr/bin/ocamlopt.opt -w -40 -w -49 -nopervasives -nostdlib -g -I src/.cs314.objs/byte -I src/.cs314.objs/native -intf-suffix .ml-gen -no-alias-deps -o src/.cs314.objs/native/cs314.cmx -c -impl src/cs314.ml-gen)
 $ (cd _build/default && /usr/bin/ocamlc.opt -w -40 -g -bin-annot -I src/.cs314.objs/byte -no-alias-deps -open Cs314 -o src/.cs314.objs/byte/cs314__Final.cmo -c -impl src/final.ml)
 $ (cd _build/default && /usr/bin/ocamlopt.opt -w -40 -g -I src/.cs314.objs/byte -I src/.cs314.objs/native -intf-suffix .ml -no-alias-deps -open Cs314 -o src/.cs314.objs/native/cs314__Final.cmx -c -impl src/final.ml)
 $ (cd _build/default && /usr/bin/ocamlopt.opt -w -40 -g -a -o src/cs314.cmxa src/.cs314.objs/native/cs314.cmx src/.cs314.objs/native/cs314__Final.cmx)

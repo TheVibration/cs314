@@ -116,14 +116,16 @@ let rec substitute_in_term s t =
   let acc = [] in
   match t with
   |Constant(x) -> t
-  |Variable(x) -> if (Substitution.find_opt t s) = None then t else Substitution.find t s
+  |Variable(x) -> if (Substitution.find_opt t s) = None then t else (Substitution.find t s)
   |Function(fun_name,l) -> 
     Function(fun_name,List.fold_left(fun acc x -> acc@[substitute_in_term s x]) acc l)
 
-    
-
 let substitute_in_clause s c =
-  raise (Failure "Problem 3 Not implemented")
+  let acc = [] in
+  match c with
+  |Fact(f) -> Fact(substitute_in_term s f)
+  |Rule(h,b) -> 
+    Rule(substitute_in_term s h, List.fold_left(fun acc x -> acc@[substitute_in_term s x]) acc b)
 
 (* Problem 4 *)
 
