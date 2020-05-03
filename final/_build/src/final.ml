@@ -113,7 +113,14 @@ let string_of_substitution s =
   ) ^ "}"
 
 let rec substitute_in_term s t =
-  raise (Failure "Problem 3 Not implemented")
+  let acc = [] in
+  match t with
+  |Constant(x) -> t
+  |Variable(x) -> if (Substitution.find_opt t s) = None then t else Substitution.find t s
+  |Function(fun_name,l) -> 
+    Function(fun_name,List.fold_left(fun acc x -> acc@[substitute_in_term s x]) acc l)
+
+    
 
 let substitute_in_clause s c =
   raise (Failure "Problem 3 Not implemented")
