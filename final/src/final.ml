@@ -149,7 +149,22 @@ let _ = print_endline (string_of_clause (freshen c))
 exception Not_unifiable
 
 let unify t1 t2 =
-  raise (Failure "Problem 4 Not implemented")
+  let theta = Substitution.empty in
+  let rec unify t1 t2 theta =
+    let t1 = substitute_in_term theta t1 in
+    let t2 = substitute_in_term theta t2 in
+    match (t1,t2) with
+    |(Variable(x),_) -> if t1 = t2 then theta
+      else if (occurs_check t1 t2) then raise(Not_unifiable)
+      else Substitution.map (fun value -> substitute_in_term (Substitution.singleton t1 t2) (value)) (Substitution.add t1 t2 theta)
+    |(_, Variable(x)) -> if t1 = t2 then theta
+      else if (occurs_check t2 t1) then raise(Not_unifiable)
+      else Substitution.map (fun value -> substitute_in_term (Substitution.singleton t2 t1) (value)) (Substitution.add t2 t1 theta)
+    |(Constant(x),Constant(y)) -> if t1 = t2 then theta else raise(Not_unifiable)
+    |(Function(h1,b1), Function(h2,b2)) -> List.fold_left2 (fun theta t1 t2  -> unify t1 t2 theta) theta b1 b2
+    | _ -> raise(Not_unifiable)
+  in 
+  unify t1 t2 theta
 
 (* Problem 5 *)
 
