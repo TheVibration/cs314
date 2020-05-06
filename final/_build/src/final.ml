@@ -169,7 +169,39 @@ let unify t1 t2 =
 (* Problem 5 *)
 
 let nondet_query program goal =
-  raise (Failure "Problem 5 Not implemented")
+    let resolvent = goal in
+    let rec nondet_query program goal resolvent =
+      match resolvent with
+      |[] -> goal
+      | resolvent -> 
+      let a = List.nth resolvent (Random.int(List.length resolvent)) in
+      let a' = List.nth program (Random.int(List.length program)) in
+      let rs = List.fold_left(fun acc x -> if x <> a then acc@[x] else acc) [] resolvent in
+      let a' = freshen a' in
+      match a' with
+      |Fact(head) ->
+        (match unify head a with
+        |exception (Not_unifiable) -> []
+        |s ->
+        let goal' = List.fold_left(fun acc x -> acc@[substitute_in_term s x]) [] goal in
+        let resolvent' = List.fold_left (fun acc x -> acc@[substitute_in_term s x]) [] rs in
+        nondet_query program goal' resolvent'
+        )
+      |Rule(head,body) ->
+        (match unify head a with
+        |exception (Not_unifiable) -> []
+        |s ->
+        let goal' = List.fold_left(fun acc x -> acc@[substitute_in_term s x]) [] goal in
+        let resolvent' = List.fold_left(fun acc x -> acc@[substitute_in_term s x]) [] (rs@body) in
+        nondet_query program goal' resolvent'
+        )
+      in
+      let rec loop () =
+        let result = nondet_query program goal resolvent in
+        if result = [] then loop ()
+        else result
+      in
+      loop ()
 
 (* Problem Bonus *)
 
